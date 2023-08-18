@@ -7,7 +7,7 @@ Trained on a robust dataset of brain MRI scans, our custom Convolutional Neural 
 
 The application allows users to upload brain scan images and receive a prediction of the disease stage (Mild, Moderate, Very Mild, or Non Demented) using the pre-trained CNN model. The predicted results are displayed on the web page along with the uploaded image.
 
-##Run the application:
+## Run the application
  open PyCharm and run app.py 
 
 ## Usage
