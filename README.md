@@ -17,6 +17,13 @@ The application allows users to upload brain scan images and receive a predictio
 
 3. Click the "Submit" button to process the image and view the prediction.
 
+## Language Usage
+The primary language used in this project is Python. Here are the key components and libraries utilized:
+
+- **Flask**: Used as the web framework for developing the application.
+- **Keras**: Employed for building and training the Convolutional Neural Network (CNN) model.
+- **Firebase**: Utilized for integrating the storage functionality and facilitating image upload and retrieval.
+
 ## Acknowledgements
 - The deep learning model used in this application is trained on the [Alzheimer's Disease Neuroimaging Initiative (ADNI) dataset](http://adni.loni.usc.edu/).
 - Special thanks to the developers of Flask, Keras, and Firebase for providing the tools and libraries necessary to build this application.
