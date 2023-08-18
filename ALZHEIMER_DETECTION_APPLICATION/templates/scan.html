@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Alzheimer Scan</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-Pz7/0R6o0w7Zp1D4iWsY4Y2Q+8lLq3Gouh39LlJnW+R8wZorJ4dGI4YJ4z6j9XyvCvDhLH6VdUZJ5cw7w5+5Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="/static/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /*_______________*/
+    body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+
+      background-image: url(/static/brinpg.png);
+      background-size: 100%;
+    }
+
+    h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    .jumbotron {
+      background-color: #f4511e;
+      color: #fff;
+      padding: 70px 25px;
+      font-family: Montserrat, sans-serif;
+    }
+
+    .container-fluid {
+      padding: 60px 50px;
+    }
+
+    .bg-grey {
+      background-color: #f6f6f6;
+    }
+
+    .navbar {
+      margin-bottom: 0;
+      background-color: #f4511e;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+    }
+
+    .navbar li a,
+    .navbar .navbar-brand {
+      color: #fff !important;
+    }
+
+    .navbar-nav li a:hover,
+    .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+    }
+
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+    }
+
+
+    .scan_section {
+      width: 100%;
+      float: left;
+
+      height: 100%;
+
+      padding-bottom: 50px;
+
+    }
+
+    .scan_taital {
+      width: 100%;
+      float: left;
+      font-size: 40px;
+      color: #081419;
+      text-align: center;
+      font-weight: bold;
+    }
+
+
+    .scan_section_2 {
+      width: 100%;
+      float: left;
+    }
+
+    .box_main {
+      width: 60%;
+      margin: 0 auto;
+      background-color: #ffffff;
+      height: auto;
+      box-shadow: 0px 0px 8px 0px;
+      padding: 0px 20px 0px 20px;
+      margin-bottom: 20px;
+    }
+
+    .image_1 {
+      width: 100%;
+      text-align: center;
+      position: relative;
+      top: 20px;
+    }
+
+
+
+    .design_text {
+      width: 100%;
+      font-size: 24px;
+      font-weight: bold;
+      color: #151515;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      
+    }
+
+    /* Style the file input button */
+    .file-input {
+      position: relative;
+      text-align: center;
+      display: inline-block;
+      width: 50%;
+      margin-top: 2rem;
+      margin-bottom: 40px;
+      padding: 16px 0;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background-color:black;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .file-input:hover {
+      background-color:rgb(117, 112, 112);
+    }
+
+    .file-input:active {
+      background-color: rgb(65, 62, 62);
+    }
+
+    .file-input input[type="file"] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .file-input i {
+      position: absolute;
+      top: 50%;
+      right: 0.5rem;
+      transform: translateY(-50%);
+      font-size: 1.25rem;
+    }
+
+    /* Style the image preview */
+    .image-preview {
+      position: relative;
+      width: 100%;
+      height: 240px;
+      background: var(--grey);
+      margin-bottom: 30px;
+      border-radius: 15px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .image-preview img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 100;
+    }
+
+    /* Style the submit button */
+    .submit-button {
+      position: relative;
+      text-align: center;
+      display: inline-block;
+      width: 50%;
+      margin-top: 2rem;
+      padding: 16px 0;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background-color: black;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-button:hover {
+      background-color: rgb(117, 112, 112);
+    }
+
+    .submit-button:active {
+      background-color:rgb(65, 62, 62);
+
+  </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">HOME</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron text-center">
+    <h1>Alzheimer Detection</h1>
+    <p>Medical Attention You Can Rely On</p>
+  </div>
+
+  <div class="scan_section layout_padding">
+    <div class="container">
+      <div id="main_slider" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="scan_section_2 layout_padding">
+              <div class="box_main">
+
+                <h2 class="design_text">Scan here</h2>
+
+                <form action="{{ url_for('get_output') }}" method="post" action="/submit" enctype="multipart/form-data">
+
+                  <label for="file-input" class="file-input">
+                    Choose a file
+                    <input id="file-input" type="file" name="my_image" />
+                    <i class="fas fa-upload"></i>
+                  </label>
+                  <div class="image-preview">
+
+                    <img id="preview" src="/static/Screenshot 2023-04-27 194915.png" alt="Image Preview" />
+
+                  </div>
+                  <button type="submit" class="submit-button">Submit</button>
+                  {% if prediction %}
+                  <h2> The Result: <i> {{prediction}} </i></h2>
+
+                  {% if prediction == "Mild Demented" %}
+                  <a href="/mild">Click here for show solution</a>
+                  {% elif prediction == "Moderate Demented" %}
+                  <a href="/moderate">Click here for show solution</a>
+                  {% elif prediction == "Very Mild Demented" %}
+                  <a href="/verymild">Click here for show solution</a>
+                  {% elif prediction == "Non Demented" %}
+                  <h4>You do not have Alzheimer's</h4>
+                  {% endif %}
+
+                  {% endif %}
+
+                </form>
+
+
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <script>
+    // Preview the selected image
+    const fileInput = document.querySelector('#file-input');
+    const preview = document.querySelector('#preview');
+    fileInput.addEventListener('change', () => {
+      const file = fileInput.files[0];
+      const reader = new FileReader();
+      reader.addEventListener('load', () => {
+        preview.setAttribute('src', reader.result);
+      });
+      reader.readAsDataURL(file);
+    });
+
+  </script>
+</body>
+
+</html>

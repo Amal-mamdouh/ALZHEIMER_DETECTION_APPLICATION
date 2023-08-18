@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Alzheimer Scan</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /*_______________*/
+        body {
+            font: 400 15px Lato, sans-serif;
+            line-height: 1.8;
+            color: #818181;
+
+            background-image:  url(/static/brinpg.png);
+            background-size: 100%;
+        }
+
+        h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #303030;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            color: #303030;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .jumbotron {
+            background-color: #f4511e;
+            color: #fff;
+            padding: 70px 25px;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .container-fluid {
+            padding: 60px 50px;
+        }
+
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+
+        .navbar {
+            margin-bottom: 0;
+            background-color: #f4511e;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .navbar li a,
+        .navbar .navbar-brand {
+            color: #fff !important;
+        }
+
+        .navbar-nav li a:hover,
+        .navbar-nav li.active a {
+            color: #f4511e !important;
+            background-color: #fff !important;
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+
+
+        .news_section {
+            width: 100%;
+            float: left;
+
+            height: 100%;
+
+            padding-bottom: 10px;
+
+        }
+
+        .news_taital {
+            width: 100%;
+            float: left;
+            font-size: 40px;
+            color: #081419;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .news_text {
+            width: 60%;
+            margin: 0 auto;
+            font-size: 16px;
+            color: #151515;
+            text-align: center;
+        }
+
+        .news_section_2 {
+            width: 100%;
+            float: left;
+        }
+
+        .box_main {
+            width: 60%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            height: auto;
+            box-shadow: 0px 0px 8px 0px;
+            padding: 0px 20px 0px 20px;
+            margin-bottom: 20px;
+        }
+
+        .image_1 {
+            width: 100%;
+            text-align: center;
+            position: relative;
+            top: 20px;
+        }
+
+
+        .lorem_text {
+            width: 100%;
+            font-size: 16px;
+            color: #081419;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .read_btn {
+            width: 170px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 10px;
+            display: flex;
+            top: 20px;
+            position: relative;
+        }
+
+        .read_btn a {
+            width: 100%;
+            float: left;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: black;
+            text-align: center;
+            padding: 10px 0px;
+            border-radius: 30px;
+        }
+
+        .read_btn a:hover {
+            color: #ffffff;
+            background-color:#303030;
+        }
+
+        .design_text {
+            width: 100%;
+            font-size: 24px;
+            font-weight: bold;
+            color: #151515;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        
+
+        
+    </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">HOME</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center">
+        <h1>Alzheimer Detection</h1>
+        <p>Medical Attention You Can Rely On</p>
+    </div>
+
+
+    <!-- news section start -->
+    <div class="news_section layout_padding">
+        <div class="container">
+            <div id="main_slider" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h1 class="news_taital">Mild Dementia</h1>
+                        <p class="news_text">There is no cure for Alzheimer's disease or mild dementia caused by
+                            Alzheimer's, but treatments and strategies can manage symptoms and improve the quality of
+                            life of individuals with the condition.</p>
+                        <div class="news_section_2 layout_padding">
+                            <div class="box_main">
+                                <div class="image_1"><img src="/static/Screenshot 2023-05-01 203446.png"></div>
+                                <br>
+                                <p class="lorem_text">Medications called "cholinesterase inhibitors" and "memantine" can
+                                    help improve cognitive function and delay the progression of symptoms in some
+                                    individuals with mild to moderate Alzheimer's disease.
+
+                                    <br>Other strategies that may help individuals with mild dementia caused by
+                                    Alzheimer's include:
+                                <ul>
+                                    <li> Creating a structured routine for daily activities</li>
+                                    <li>Using memory aids such as calendars and notes</li>
+                                    <li>Simplifying tasks and breaking them into smaller steps</li>
+                                    <li> Providing a safe and comfortable environment</li>
+                                    <li>Engaging in activities that promote mental stimulation, such as puzzles or
+                                        reading</li>
+                                </ul>
+                                </p>
+                                <div class="read_btn"><a href="/scan">Rescan</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- news section end -->
+
+</body>
+
+</html>
